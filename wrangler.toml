@@ -1,0 +1,6 @@
+#:schema node_modules/wrangler/config-schema.json
+name = "zaraz-context-enricher-template"
+main = "src/index.ts"
+compatibility_date = "2024-08-21"
+compatibility_flags = ["nodejs_compat"]
+

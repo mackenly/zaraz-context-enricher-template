@@ -1,2 +1,27 @@
-# zaraz-context-enricher-template
- Starter template for Cloudflare Zaraz Context Enricher
+# Zaraz Context Enricher Template
+Starter template for Cloudflare Zaraz Context Enricher
+
+## Overview
+Need to enrich the context of your Cloudflare Workers with additional data? This template is a starting point for building a Cloudflare Worker that uses the [Zaraz Context Enricher](https://developers.cloudflare.com/zaraz/advanced/context-enricher/) to add additional data to the context of your requests.
+
+> [!TIP]
+> If you need help configuring Zaraz for your project, I am a Cloudflare Zaraz Certified Developer and am available for consulting. [Contact me](https://tricitiesmediagroup.com/contact) for more information.
+
+## Usage
+1. Use this template to create a new repository in your GitHub account.
+2. Clone the repository to your local machine.
+3. `npm i` to install the dependencies.
+4. Edit the `index.js` file to add your own logic for enriching the context of your requests.
+5. Run `npm run deploy` to deploy your worker to Cloudflare.
+
+> [!IMPORTANT]
+> Local development does not currently work with the Zaraz Context Enricher. You must deploy your worker to Cloudflare to test it. This is because the Zaraz context is not passed in within the local development environment.
+
+## Resources
+- [Zaraz Context Enricher documentation](https://developers.cloudflare.com/zaraz/advanced/context-enricher/)
+- [Cloudflare Workers documentation](https://developers.cloudflare.com/workers/)
+- [Worker Bindings](https://developers.cloudflare.com/workers/runtime-apis/bindings/)
+- [Use Service Bindings if you need to send a request to another Worker on the same account](https://developers.cloudflare.com/workers/runtime-apis/bindings/service-bindings/)
+
+## License
+This project is open source and available under the [Apache 2.0](LICENSE). Copyright 2024 [Tricities Media Group, LLC](https://tricitiesmediagroup.com).
