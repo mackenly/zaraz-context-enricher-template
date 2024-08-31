@@ -11,11 +11,17 @@ Need to enrich the context of your Cloudflare Workers with additional data? This
 1. Use this template to create a new repository in your GitHub account.
 2. Clone the repository to your local machine.
 3. `npm i` to install the dependencies.
-4. Edit the `index.js` file to add your own logic for enriching the context of your requests.
-5. Run `npm run deploy` to deploy your worker to Cloudflare.
+4. Edit the `src/index.ts` file to add your own logic for enriching the context of your requests.
+5. After configuring CD (see below), push your changes to GitHub to deploy your worker.
 
 > [!IMPORTANT]
 > Local development does not currently work with the Zaraz Context Enricher. You must deploy your worker to Cloudflare to test it. This is because the Zaraz context is not passed in within the local development environment.
+
+## Continuous Deployment via Actions
+This template includes a GitHub Actions workflow that will deploy your worker to Cloudflare when you push changes to the `main` branch. To configure this workflow, you will need to add the following secrets to your GitHub repository:
+- `CLOUDFLARE_API_TOKEN`: Your [Cloudflare API token](https://dash.cloudflare.com/?to=/profile/api-tokens) with permission to edit Workers (use the `Edit Workers` template)
+
+Alternatively, you can manually `npm run deploy` to deploy your worker from your local machine or other CI/CD system.
 
 ## Resources
 - [Zaraz Context Enricher documentation](https://developers.cloudflare.com/zaraz/advanced/context-enricher/)
