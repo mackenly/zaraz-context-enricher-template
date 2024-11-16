@@ -5,11 +5,11 @@
  * Learn more about Context Enrichment at https://developers.cloudflare.com/zaraz/advanced/context-enricher/
  */
 
-import { ZarazContext } from "./types";
+import type { ZarazContext } from "@mackenly/zaraz-tools/";
 
 export default {
 	async fetch(request, env, ctx): Promise<Response> {
-		const { system, client } = await request.json() as ZarazContext;
+		const { system, client, config } = await request.json() as ZarazContext;
 		
 		// Here goes your modification to the system or client objects.
 		/*
@@ -17,6 +17,6 @@ export default {
 		  system.device.location.country = 'PI';
 		*/
 
-		return new Response(JSON.stringify({ system, client }));
+		return new Response(JSON.stringify({ system, client, config }));
 	},
 } satisfies ExportedHandler<Env>;
