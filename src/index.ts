@@ -10,7 +10,10 @@ import type { ZarazContext } from "@mackenly/zaraz-tools/";
 export default {
 	async fetch(request, env, ctx): Promise<Response> {
 		const { system, client, config } = await request.json() as ZarazContext;
-		
+
+		// You could use this to log all incoming requests.
+		console.log("Incoming request:", { system, client, config });
+
 		// Here goes your modification to the system or client objects.
 		/*
 		  For example, to change the country to a fictitious "Pirate's Island" ("PI"), use:
