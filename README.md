@@ -20,6 +20,7 @@ Need to enrich the context of your Cloudflare Workers with additional data? This
 ## Continuous Deployment via Actions
 This template includes a GitHub Actions workflow that will deploy your worker to Cloudflare when you push changes to the `main` branch. To configure this workflow, you will need to add the following secrets to your GitHub repository:
 - `CLOUDFLARE_API_TOKEN`: Create a token using the `Edit Workers` permission template or open [this deeplink](https://dash.cloudflare.com/profile/api-tokens?permissionGroupKeys=%5B%7B%22key%22%3A%22account_settings%22%2C%22type%22%3A%22read%22%7D%2C%7B%22key%22%3A%22memberships%22%2C%22type%22%3A%22read%22%7D%2C%7B%22key%22%3A%22page%22%2C%22type%22%3A%22edit%22%7D%2C%7B%22key%22%3A%22user_details%22%2C%22type%22%3A%22read%22%7D%2C%7B%22key%22%3A%22workers_kv_storage%22%2C%22type%22%3A%22edit%22%7D%2C%7B%22key%22%3A%22workers_r2%22%2C%22type%22%3A%22edit%22%7D%2C%7B%22key%22%3A%22workers_routes%22%2C%22type%22%3A%22edit%22%7D%2C%7B%22key%22%3A%22workers_scripts%22%2C%22type%22%3A%22edit%22%7D%2C%7B%22key%22%3A%22workers_tail%22%2C%22type%22%3A%22read%22%7D%5D&name=Zaraz+Context+Enricher+GH+Action+CD&accountId=*&zoneId=all) to prefill the token permissions.
+- `CLOUDFLARE_ACCOUNT_ID`: Copy your account ID from the Account Details section on the [Workers and Pages page within the Cloudflare Dashboard](https://dash.cloudflare.com/?to=/:account/workers-and-pages).
 
 Alternatively, you can manually `npm run deploy` to deploy your worker from your local machine or other CI/CD system.
 
